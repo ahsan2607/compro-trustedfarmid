@@ -103,10 +103,10 @@ export const Timeline: React.FC<TimelineProps> = ({
         {items.map((item, i) => (
           <tr key={i}>
             {/* Content before icon (no longer used when tooltip is active) */}
-            {isContentFirst && <td className="pr-2" />}
+            {isContentFirst && <td className={item.header || item.text ? "pr-2" : ""} />}
 
             {/* Icon + lines */}
-            <td className="px-2 align-middle">
+            <td className={`${item.header || item.text ? "px-2" : ""} align-middle`}>
               <div className="relative flex flex-col items-center justify-center" style={{ minHeight: "4rem" }}>
                 {/* Line before */}
                 {i > 0 && (
@@ -147,7 +147,7 @@ export const Timeline: React.FC<TimelineProps> = ({
             </td>
 
             {/* Content after icon (not needed, since info is in hover) */}
-            {!isContentFirst && <td className="pl-2" />}
+            {!isContentFirst && <td className={item.header || item.text && tooltipClassName ? "" : "pl-2"} />}
           </tr>
         ))}
       </tbody>
