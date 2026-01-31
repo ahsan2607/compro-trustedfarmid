@@ -67,6 +67,9 @@ export default function Home() {
       <section className="w-[80vh] lg:h-[80vh] lg:w-full flex flex-col gap-4 lg:gap-0 lg:flex-row justify-center lg:items-center">
         <div className="w-2/3">
           <h1 className="text-5xl lg:text-9xl font-['Trebuchet_MS','sans-serif'] text-white">TRUSTED FARM ID</h1>
+          <p className="text-lg lg:text-3xl text-white font-['Trebuchet_MS','sans-serif']">
+            Partnered with PT. Trusted Digital Indonesia
+          </p>
         </div>
 
         <div className="w-1/3 flex flex-row lg:flex-col items-end gap-4">
